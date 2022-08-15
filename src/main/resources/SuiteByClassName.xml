@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite By Class">
+    <test name="By Class">
+        <classes>
+            <class name="pageObjectPageFactory.LoginIUAPageObject"></class>
+            <class name="pageObjectPageFactory.LoginIUAPageFactory"></class>
+        </classes>
+    </test>
+</suite>
