@@ -2,7 +2,7 @@
 <suite name="Suite By Package Name">
     <test name="By Package">
         <packages>
-            <package name="pageObjectPageFactory"></package>
+      <!--      <package name="pageObjectPageFactory"></package> -->
             <package name="loginPackage"></package>
         </packages>
     </test>

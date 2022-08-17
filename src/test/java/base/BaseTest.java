@@ -3,6 +3,7 @@ package base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 
 public class BaseTest {
@@ -26,8 +27,12 @@ public class BaseTest {
     @BeforeMethod
     protected void setupDriver()  {
         //download web driver if we don't have it yet
+
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+
+        WebDriver driver = new ChromeDriver(options);
         setDriver(driver);
     }
     public WebDriver getDriver() {
