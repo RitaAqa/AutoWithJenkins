@@ -3,7 +3,7 @@
     <test name="By Groups">
         <groups>
             <run>
-                <include name="Positive"></include>
+                <include name="Negative"></include>
             </run>
         </groups>
         <packages>

@@ -24,15 +24,19 @@ public class BaseTest {
         System.out.println("before class");
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun=true)
     protected void setupDriver()  {
         //download web driver if we don't have it yet
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
+        //options.addArguments("headless");
+
+        //to ignore connection is not secure error (error with a certificate that blocks page opening)
+        options.setAcceptInsecureCerts(true);
 
         WebDriver driver = new ChromeDriver(options);
+        //WebDriver driver = new ChromeDriver();
         setDriver(driver);
     }
     public WebDriver getDriver() {
@@ -44,7 +48,7 @@ public class BaseTest {
     }
 
 
-    @AfterMethod
+    @AfterMethod(alwaysRun=true)   //this is need to be added in order not to have NPE while using groups in xml files
     protected void closeDriver()  {
         driver.quit();
     }

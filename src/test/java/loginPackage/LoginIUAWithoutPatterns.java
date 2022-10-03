@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class LoginIUAWithoutPatterns extends BaseTest {
 
-    @Test(groups = "Positive")
+   @Test(groups = {"Positive"})
     void loginIUA() {
         getDriver().get("http://passport.i.ua/login");
 
@@ -29,7 +29,7 @@ public class LoginIUAWithoutPatterns extends BaseTest {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='https://passport.i.ua/sections/']")));
     }
 
-    @Test(groups = "Negative")
+    @Test(groups = {"Negative"})
     void loginIUANegative() {
         getDriver().get("http://passport.i.ua/login");
 
