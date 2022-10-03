@@ -32,7 +32,7 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("headless");
 
-        //to ignore connection is not secure error (error with a certificate that blocks page opening)
+        //to ignore connection is not secure error (an error with a certificate that blocks page opening)
         options.setAcceptInsecureCerts(true);
 
         WebDriver driver = new ChromeDriver(options);
