@@ -3,7 +3,7 @@ pipeline {
   stages{
       stage ('Build') {
         steps {
-          sh 'mvn clean test -DsuiteName=SuiteByPackage'
+          bat 'mvn clean test -DsuiteName=SuiteByPackage'
         }
       }
       stage ('Deploy') {
