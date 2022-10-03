@@ -8,7 +8,7 @@ pipeline {
       }
       stage ('Deploy') {
         steps {
-          build job: 'My First Job'  
+          build job: 'MyFirstJob'  
         }
       } 
   }
